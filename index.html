@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0f172a">
+<title>Pic Data Map</title>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: #0f172a;
+    -webkit-text-size-adjust: 100%;
+  }
+  iframe {
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    border: none;
+    display: block;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  #loading {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #94a3b8;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    font-size: 0.95rem;
+    background: #0f172a;
+    padding: 0 16px;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+  <div id="loading">Cargando…</div>
+  <iframe id="content" title="Pic Data Map" onload="document.getElementById('loading').style.display='none'"></iframe>
+  <script>
+    document.getElementById('content').src = atob("aHR0cHM6Ly9waWMtZGF0YS1tYXAubG92YWJsZS5hcHA=");
+  </script>
+</body>
+</html>
